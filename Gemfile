@@ -39,3 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'therubyracer'
+
+# YAML 配置信息
+gem "settingslogic", "~> 2.0.9"
+
+#分页
+gem 'will_paginate', '~> 3.0'

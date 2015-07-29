@@ -1,0 +1,17 @@
+# config/application.yml
+# 调用方法：Settings.xxx
+defaults: &defaults
+  site_title: '唐山律师'
+  #保存cookie时
+  session_secret: "1234567890abcdefghigklmnsdfewiruewpo-12i0.dsas90dojidco2"
+  #错误提示语
+  error_info: "出错啦,请稍后再试"
+  
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults

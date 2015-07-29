@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lawyer</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <meta charset='utf-8' />
+  <title><%= render_page_title %></title>
+  <meta name="keywords" content="唐山律师" />
+  <meta name="description" content="只为更方便地寻找律师" />  
+  <%= stylesheet_link_tag "application" %>
+  <%= yield :styles %>
+
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta content='True' name='HandheldFriendly' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--<link rel="apple-touch-icon-precomposed" href="<%= asset_path("luxlaw_logo.png") %>" />
+  <link rel="shortcut icon" href="<%= asset_path("luxlaw_logo.png") %>" />-->
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
 </head>
-<body>
 
-<%= yield %>
+<!--background-size 设置为cover(保证满屏)或者100% auto(保证宽度显示全);-->
+<body data-controller-name="<%= controller_name %>">
+  <% unless @nav_header_hidden %>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container mt-10 ta-c">
+        <%= yield :header %>
+      </div>
+    </div>
+  <% end %>
+    
+  <div class="container" id="flash_container">
+    <%= flash_message %>
+  </div>
 
+  <%= yield %>
+
+
+  <script type="text/javascript">
+    App.root_url = "";
+  </script>
+
+  <%= yield :scripts %>
 </body>
 </html>

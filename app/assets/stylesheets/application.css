@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+
+/****************常用样式 start**********************/
+
+/* margin padding start*/
+.m-0{margin:0;}
+.m-5{margin:5px;}
+.mt-5{margin-top:5px;}
+.mt-10{margin-top:10px;}
+.mt-20{margin-top:20px;}
+.mb-5{margin-bottom:5px;}
+.mb-10{margin-bottom:10px;}
+.mb-30{margin-bottom:30px;}
+.ml-10{margin-left:10px;}
+.ml-30{margin-left:30px;}
+.mr-10{margin-right:10px;}
+.mt-50{margin-top:50px;}
+.p-0{padding:0;}
+.p-5{padding:5px;}
+.p-12{padding:12px;}
+.pt-10{padding-top:10px;}
+.pb-10{padding-bottom:10px;}
+.pl-10{padding-left:10px;}
+.pl-15{padding-left:15px;}
+.pr-10{padding-right:10px;}
+.pr-15{padding-right:15px;}
+/* margin padding end*/
+
+/* vertical/text align start */
+.va-t{vertical-align:top;}
+.va-b{vertical-align:bottom;}
+.va-m{vertical-align:middle;}
+.ta-c{text-align:center;}
+.ta-l{text-align:left}
+.ta-r{text-align:right}
+.ti-2{text-indent:2em;}
+/* vertical/text align end */
+
+/* color start */
+.l-gray{color:#999;}
+.d-gray{color:#666;}
+.black{color:#000;}
+.white{color:#fff;}
+.blue{color:#ee0000;}
+.orange{color:#ee0000;}
+.red{color:#CC3333;}
+.green{color:#beee77;}
+.orange{color:#FF6D24}
+/* color end */
+
+/* float start */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;} 
+/* float end */
+
+/* display start */
+.dis-ib{
+    display: inline-block;
+}
+/* display end */
+
+/* width/height start */
+.w-220{ width:220px; }
+/* width/height end */
+
+/* background start */
+.bg-red{ background-color: red; }
+/* background end */
+
+/****************常用样式 end**********************/
