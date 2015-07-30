@@ -51,3 +51,5 @@ gem 'will_paginate', '~> 3.0'
 gem 'weixin_rails_middleware'
 # 微信高级API
 gem 'weixin_authorize'
+# 微信支付API
+gem 'wx_pay', git: 'https://github.com/jasl/wx_pay.git'

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "diymenu/query" => "diymenu#query"
   #查询用户信息
   get "diymenu/user" => "diymenu#user"
+  #发送用户信息
+  get "diymenu/send_user_text" => "diymenu#send_user_text"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
