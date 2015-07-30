@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#提前载入该文件，以便在此使用Settings
+require_relative '../app/models/settings.rb'
+
 module Lawyer
   class Application < Rails::Application
         config.to_prepare do
@@ -44,4 +47,4 @@ I18n.config.enforce_available_locales = false
 I18n.locale = 'zh-CN'
 
 #定义一个微信的全局变量
-$client = WeixinAuthorize::Client.new('wx0845238373ce143a', 'eeda3d261d525479072ff9601ede29c9')
+$client = WeixinAuthorize::Client.new(Settings.weixin_appID, Settings.weixin_appsecret)

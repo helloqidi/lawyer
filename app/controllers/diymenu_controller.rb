@@ -26,13 +26,13 @@ class DiymenuController < ApplicationController
     #获取用户信息
     def user
     	#在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID
-    	user_info = $client.user("owIvev8VSNGKjy_tGBle-a_iHCic") #需要传递用户的OpenID
+    	user_info = $client.user(Settings.my_OpenID) #需要传递用户的OpenID
     	render :text => user_info.result
     end
 
     #发送用户信息
     def send_user_text
-        response = $client.send_text_custom("owIvev8VSNGKjy_tGBle-a_iHCic", "你好")
+        response = $client.send_text_custom(Settings.my_OpenID, "你好")
         render :text => response.code
     end
 

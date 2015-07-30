@@ -81,6 +81,6 @@ test:
 production:
   <<: *default
   database: lawyer
-  username: lawyer
+  username: postgres
   password: <%= ENV['LAWYER_DATABASE_PASSWORD'] %>
   pool: 50

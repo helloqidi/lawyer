@@ -6,12 +6,24 @@ defaults: &defaults
   session_secret: "1234567890abcdefghigklmnsdfewiruewpo-12i0.dsas90dojidco2"
   #错误提示语
   error_info: "出错啦,请稍后再试"
+  #微信appID
+  weixin_appID: "wx0845238373ce143a"
+  #微信appsecret
+  weixin_appsecret: "eeda3d261d525479072ff9601ede29c9"
+  #helloqidi的OpenID
+  my_OpenID: "owIvev8VSNGKjy_tGBle-a_iHCic"
   
 development:
   <<: *defaults
 
 production:
   <<: *defaults
+  #微信appID
+  weixin_appID: "wxb27715365d2d473b"
+  #微信appsecret
+  weixin_appsecret: "1c30825b7535a8b5756bae3e6216c97d"
+  #helloqidi的OpenID
+  my_OpenID: "oJm53t1O_jCGrfyKDZLpk6BCJ4lA"
 
 test:
   <<: *defaults
