@@ -38,10 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#解决错误：Could not find a JavaScript runtime
 gem 'therubyracer'
 
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.9"
 
-#分页
+# 分页
 gem 'will_paginate', '~> 3.0'
+
+# 微信初级API
+gem 'weixin_rails_middleware'
+# 微信高级API
+gem 'weixin_authorize'

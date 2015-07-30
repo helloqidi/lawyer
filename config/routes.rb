@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
 
+  mount WeixinRailsMiddleware::Engine, at: "/"
   #首页
   root :to => "home#index"
+  get "home/index" => "home#index", as: "roots"
+  #创建菜单
+  get "diymenu/create" => "diymenu#create"
+  #查询菜单
+  get "diymenu/query" => "diymenu#query"
+  #查询用户信息
+  get "diymenu/user" => "diymenu#user"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,2 @@
+module DiymenuHelper
+end
