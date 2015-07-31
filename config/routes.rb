@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   #发送用户信息
   get "diymenu/send_user_text" => "diymenu#send_user_text"
 
+
+  #微信js sdk的测试页面
+  get "home/jstest" => "home#jstest"
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

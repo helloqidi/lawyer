@@ -11,7 +11,11 @@ WeixinRailsMiddleware::WeixinController.class_eval do
   private
 
     def response_text_message(options={})
-      reply_text_message("Your Message: #{@keyword} ; OpenID: #{@weixin_message.FromUserName}")
+      if @keyword == "2"
+        reply_text_message("http://lawyer.tunnel.mobi/home/jstest")
+      else
+        reply_text_message("Your Message: #{@keyword} ; OpenID: #{@weixin_message.FromUserName}")
+      end
     end
 
     # <Location_X>23.134521</Location_X>

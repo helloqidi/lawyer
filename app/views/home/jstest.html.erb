@@ -1,0 +1,33 @@
+<div style="text-align:center;">
+  <a class="abc red" style="font-size: 80px;" >点此预览图片,也可分享给好友</a>
+</div>
+
+<%= content_for :weixin_api do %>
+  <script type="text/javascript">
+    wx.ready(function () {
+      $('a.abc').click(function () {
+        var img_src = "http://images.huxiu.com/article/cover/201507/31/012331714616.png";
+        wx.previewImage({
+          current: img_src,
+          urls: [img_src]
+        });
+      });
+
+      wx.onMenuShareAppMessage({
+        title: "<%= @share_title %>",
+        desc: "<%= @share_desc %>",
+        link: "<%= @share_url %>",
+        imgUrl: "<%= @share_img %>",
+      });
+
+      wx.onMenuShareTimeline({
+        title: "<%= @share_title %>",
+        link: "<%= @share_url %>",
+        imgUrl: "<%= @share_img %>",
+      });
+    });
+    wx.error(function (res) {
+      alert(res);
+    });
+  </script>
+<% end %>
