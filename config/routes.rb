@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get "diymenu/user" => "diymenu#user"
   #发送用户信息
   get "diymenu/send_user_text" => "diymenu#send_user_text"
-
+  #网页授权跳转测试
+  get "diymenu/redirect_test" => "diymenu#redirect_test", as: "redirect_test"
 
   #微信js sdk的测试页面
   get "home/jstest" => "home#jstest"

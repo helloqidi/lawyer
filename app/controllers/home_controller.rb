@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 	def index
 	end
 
+	#调用js sdk的测试页面
 	def jstest
 		@share_title = "测试标题"
 		@share_desc = "描述内容是。。。"

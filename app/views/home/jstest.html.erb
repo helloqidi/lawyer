@@ -6,7 +6,7 @@
   <script type="text/javascript">
     wx.ready(function () {
       $('a.abc').click(function () {
-        var img_src = "http://images.huxiu.com/article/cover/201507/31/012331714616.png";
+        var img_src = "<%= @share_img %>";
         wx.previewImage({
           current: img_src,
           urls: [img_src]
